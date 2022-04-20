@@ -32,7 +32,7 @@ addList.addEventListener("click", () => {
     else{
       document.getElementById("intro-text").style.display="none";
       const box = document.createElement("div");
-      const boxHeading = document.createElement("a");
+      const boxHeading = document.createElement("span");
       const add = document.createElement("i");
       const deleteBtn = document.createElement("i");
       const btnContainer = document.createElement("div");
@@ -41,7 +41,7 @@ addList.addEventListener("click", () => {
       deleteBtn.className = "fa-solid fa-trash-can";
       boxHeading.id="box-heading";
       box.className = "box";
-      boxHeading.setAttribute("href", "index2.html");
+      // boxHeading.setAttribute("href", "index2.html");
       document.querySelector(".container-2").appendChild(box);
       box.appendChild(boxHeading);
       box.appendChild(btnContainer);
