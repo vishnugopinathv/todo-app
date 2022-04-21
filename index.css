@@ -109,6 +109,9 @@ i{
   position: absolute;
   top: 35%;
   left: 35%;
+  animation-duration: 0.4s;
+  animation-name: popupbox;
+  animation-timing-function: ease-in-out;
 }
 .task{
   margin: 0.5rem;
@@ -240,4 +243,11 @@ input[type="text"] {
  left: 5%;
 }
 }
-
+@keyframes popupbox {
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0);
+  }
+}
