@@ -41,13 +41,30 @@ addList.addEventListener("click", () => {
       deleteBtn.className = "fa-solid fa-trash-can";
       boxHeading.id="box-heading";
       box.className = "box";
-      // boxHeading.setAttribute("href", "index2.html");
-      document.querySelector(".container-2").appendChild(box);
+      const container2=document.querySelector(".container-2");
+      container2.appendChild(box);
       box.appendChild(boxHeading);
       box.appendChild(btnContainer);
       btnContainer.appendChild(add);
       btnContainer.appendChild(deleteBtn);
       boxHeading.innerText = popInput.value;
+      boxHeading.addEventListener('click',()=>{
+        const heading=document.getElementById("heading");
+        heading.innerText=boxHeading.innerText;
+        const container=document.querySelector(".container");
+        const container3=document.querySelector(".container-3");
+        container.style.visibility="hidden";
+        container3.style.visibility="visible";
+        const backBtn=document.getElementById("backbtn");
+        console.log(boxHeading)
+        container3.appendChild(box);
+        backBtn.addEventListener('click',()=>{
+          container3.removeChild(box);
+          container2.appendChild(box);
+          document.querySelector(".container").style.visibility="visible";
+          document.querySelector(".container-3").style.visibility="hidden";
+        })
+      })
       boxHeading.style.borderBottom = "1px solid black";
       popup.removeChild(popupbox);
       document.querySelector(".container").classList.remove("blur");
@@ -65,9 +82,9 @@ addList.addEventListener("click", () => {
         const closeBtn = document.createElement("div");
         popup.appendChild(popupbox);
         popupbox.className = "popup-box";
-        popHeading.innerText = "Add new item";
+        popHeading.innerText = "Add new Task";
         popInput.type = "text";
-        popInput.placeholder = "Add new item here";
+        popInput.placeholder = "Add new Task here";
         addBtn.className = "popup-box-button";
         closeBtn.className = "popup-box-button";
         addBtn.innerText = "Add";
