@@ -56,8 +56,13 @@ addList.addEventListener("click", () => {
         container.style.visibility="hidden";
         container3.style.visibility="visible";
         const backBtn=document.getElementById("backbtn");
-        console.log(boxHeading)
         container3.appendChild(box);
+        deleteBtn.addEventListener('click',()=>{
+          document.querySelector(".container-3").removeChild(box);
+          document.querySelector(".container").style.visibility="visible";
+        document.querySelector(".container-3").style.visibility="hidden";
+
+        })
         backBtn.addEventListener('click',()=>{
           container3.removeChild(box);
           container2.appendChild(box);

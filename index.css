@@ -119,10 +119,8 @@ i {
   font-size: 1.2rem;
   font-family: "Times New Roman", Times, serif;
 }
-.popup-wrap {
-  /* display: flex;
-  justify-content: center; */
-  /* position: relative; */
+#box-heading{
+  cursor: pointer;
 }
 input[type="text"] {
   border-radius: 5px;
@@ -229,10 +227,11 @@ input[type="text"] {
     margin-top: 3rem;
   }
   .container-3 {
-    flex-direction: row-reverse;
-    justify-content: center;
+    flex-direction: column;
+    position:absolute;
+    left: 2rem;
+    width: 75vw;
     font-size: 1.4rem;
-    margin-top: 3rem;
   }
   .back-button {
     position: relative;
