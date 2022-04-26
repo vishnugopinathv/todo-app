@@ -250,9 +250,9 @@ input[type="text"] {
 }
 @keyframes popupbox {
   from {
-    transform: translateY(100%);
+    transform: scale(0);
   }
   to {
-    transform: translateY(0);
+    transform: scale(1)
+    }
   }
-}
